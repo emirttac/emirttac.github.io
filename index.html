@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" data-i18n="meta.description" content="Emir Tuğra Ataç — Windows and desktop software developer. Performance overlays, system tools and desktop apps, built end to end." />
+  <meta name="theme-color" content="#E6EBF2" id="theme-color-meta" />
+  <meta property="og:title" content="Emir Tuğra Ataç — Windows &amp; Desktop Software Developer" />
+  <meta property="og:description" data-i18n="meta.ogDescription" content="Windows and desktop software built end to end: from kernel-level frame measurement to installers and 10-language interfaces." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emirttac.github.io/" />
+  <title>Emir Tuğra Ataç — Windows &amp; Desktop Software Developer</title>
+  <script>
+    (function () {
+      try {
+        var key = "emirttac-theme";
+        var saved = localStorage.getItem(key);
+        var theme = saved === "dark" || saved === "light"
+          ? saved
+          : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Emir Tuğra Ataç", "alternateName": "emirttac", "jobTitle": "Windows & desktop software developer", "url": "https://emirttac.github.io/", "sameAs": ["https://github.com/emirttac", "https://www.linkedin.com/in/emir-tu%C4%9Fra-ata%C3%A7-88b591394/", "https://www.youtube.com/@BiAltTab", "https://www.instagram.com/emirttac/"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=10" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1220'/%3E%3Cpath d='M8 22V10h3.2l2.4 7.6L16 10h3.2v12h-2.4v-7.2L14.6 22h-2.4L10.4 14.8V22H8zm14.2 0l-3.6-12h2.7l2.1 7.4 2.1-7.4h2.6L24.5 22h-2.3z' fill='%23F4F6F8'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top" data-i18n-aria="aria.home" aria-label="emirttac home">emirttac</a>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" id="theme-toggle" data-i18n-aria="aria.themeToDark" aria-label="Switch to dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" />
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77" />
+        </svg>
+      </button>
+      <label class="lang-switch">
+        <span class="visually-hidden" data-i18n="aria.lang">Language</span>
+        <select id="lang-select" data-i18n-aria="aria.lang" aria-label="Language">
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+          <option value="zh">中文</option>
+          <option value="tr">Türkçe</option>
+        </select>
+      </label>
+      <nav class="nav" data-i18n-aria="aria.nav" aria-label="Main menu">
+        <a href="#work" data-i18n="nav.work">Projects</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a class="nav-github" href="https://github.com/emirttac" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <button class="nav-toggle" type="button" data-i18n-aria="aria.menuOpen" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-brand">
+      <div class="hero-atmosphere" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hud-frame">
+          <span class="hud-corner tl"></span>
+          <span class="hud-corner tr"></span>
+          <span class="hud-corner bl"></span>
+          <span class="hud-corner br"></span>
+          <div class="hud-scan"></div>
+          <div class="hud-metrics">
+            <span>FPS 240</span>
+            <span>1% 112</span>
+            <span>GPU 68°</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-reveal data-i18n="hero.eyebrow">Emir Tuğra Ataç · Windows &amp; desktop software developer</p>
+        <h1 id="hero-brand" class="hero-brand" data-reveal>emirttac</h1>
+        <p class="hero-lead" data-reveal data-i18n="hero.lead">I build Windows and desktop software end to end — from kernel-level ETW and hardware APIs to WPF interfaces, installers and localization. Everything below is public on GitHub, so you can read the code, not just the pitch.</p>
+        <div class="hero-actions" data-reveal>
+          <a class="btn btn-primary" href="#work" data-i18n="hero.ctaPrimary">Explore the projects</a>
+          <a class="btn btn-ghost" href="https://github.com/emirttac" target="_blank" rel="noopener noreferrer" data-i18n="hero.ctaSecondary">GitHub profile</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/emir-tu%C4%9Fra-ata%C3%A7-88b591394/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section work" aria-labelledby="work-title">
+      <div class="section-head">
+        <p class="section-kicker" data-reveal data-i18n="work.kicker">Selected work</p>
+        <h2 id="work-title" data-reveal data-i18n="work.title">Software I've built from the first line to the installer</h2>
+        <p class="section-lead" data-reveal data-i18n="work.lead">Open a project to see the problem it solves and how it's built. The code is one click away.</p>
+      </div>
+
+      <ul class="project-list">
+        <li class="project featured" data-reveal>
+          <button type="button" class="project-trigger" aria-expanded="false" aria-controls="project-mars">
+            <div class="project-meta">
+              <span class="project-index">01</span>
+              <span class="project-stack">C# · .NET 8 · WPF</span>
+            </div>
+            <div class="project-body">
+              <h3>Mars FPS Monitor</h3>
+              <p class="project-teaser" data-i18n="mars.teaser">A performance overlay that measures FPS without ever touching your game.</p>
+              <ul class="project-tags">
+                <li>ETW / RTSS</li>
+                <li data-i18n="mars.tagLangs">10 languages</li>
+                <li>v3.0</li>
+              </ul>
+            </div>
+            <span class="project-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project-panel" id="project-mars" aria-hidden="true">
+            <div class="project-panel-inner">
+              <p class="project-summary" data-i18n="mars.summary">Many overlays inject code into the game process. Mars doesn't: it reads frame data from Windows kernel graphics events (ETW) instead. What started as an FPS counter became a full control panel — seven HUD layouts, a game library across five launchers with per-game stats, optional GPU overclocking for NVIDIA, AMD and Intel Arc, and a fan-control beta.</p>
+              <ul class="project-highlights">
+                <li data-i18n="mars.h1">FPS comes from Windows ETW events, filtered to the foreground game and de-duplicated across three graphics providers (DXGI, Direct3D 9, DxgKrnl). No DLL injection.</li>
+                <li data-i18n="mars.h2">Built to fail safe: overclock values are hard-clamped (imported profiles and AI suggestions included), bad sensor data falls back to stock clocks, and an exit or crash restores driver defaults.</li>
+                <li data-i18n="mars.h3">Production-minded: an Inno Setup installer that handles .NET and VC++ prerequisites, unit tests around the risky logic, no telemetry, crash reports redacted before you share them, and 10 UI languages.</li>
+              </ul>
+              <a class="btn btn-primary project-github" href="https://github.com/emirttac/Mars-FPS-Monitor" target="_blank" rel="noopener noreferrer" data-i18n="work.viewGithub">View code on GitHub</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="project" data-reveal>
+          <button type="button" class="project-trigger" aria-expanded="false" aria-controls="project-win">
+            <div class="project-meta">
+              <span class="project-index">02</span>
+              <span class="project-stack">C# · .NET 8 · WPF</span>
+            </div>
+            <div class="project-body">
+              <h3>WinCleaner</h3>
+              <p class="project-teaser" data-i18n="win.teaser">A Windows debloat tool that shows its work — and lets you undo it.</p>
+              <ul class="project-tags">
+                <li>56 tweaks</li>
+                <li data-i18n="win.tagLangs">8 languages</li>
+                <li>Restore points + Undo</li>
+              </ul>
+            </div>
+            <span class="project-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project-panel" id="project-win" aria-hidden="true">
+            <div class="project-panel-inner">
+              <p class="project-summary" data-i18n="win.summary">Most “cleaner” tools either hide what they change or apply dozens of risky tweaks in one click. WinCleaner is built around visibility and control: every tweak, service and app lives in an auditable JSON catalog, carries a risk level, and is filtered by Windows build. Currently in public beta.</p>
+              <ul class="project-highlights">
+                <li data-i18n="win.h1">Four risk levels — Safe, Caution, Dangerous, Blocked. Blocked items, like critical system services, can't be run at all; dangerous ones need an explicit opt-in plus a confirmation dialog.</li>
+                <li data-i18n="win.h2">Reversible where possible: a System Restore point before changes, a session change log and a global Undo backed by a persistent journal.</li>
+                <li data-i18n="win.h3">Layered architecture (WPF/MVVM → Core → Data) over a catalog of 56 tweaks, 28 services and 39 AppX packages, six presets, and unit tests that keep all 8 languages in sync.</li>
+              </ul>
+              <a class="btn btn-primary project-github" href="https://github.com/emirttac/WinCleaner" target="_blank" rel="noopener noreferrer" data-i18n="work.viewGithub">View code on GitHub</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="project" data-reveal>
+          <button type="button" class="project-trigger" aria-expanded="false" aria-controls="project-emirdeck">
+            <div class="project-meta">
+              <span class="project-index">03</span>
+              <span class="project-stack">Python · PyQt6</span>
+            </div>
+            <div class="project-body">
+              <h3>EmirDeck</h3>
+              <p class="project-teaser" data-i18n="emirdeck.teaser">One key. Fullscreen media. Instantly.</p>
+              <ul class="project-tags">
+                <li>Global hotkey</li>
+                <li>Tray app</li>
+                <li data-i18n="emirdeck.tagLangs">4 languages</li>
+              </ul>
+            </div>
+            <span class="project-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project-panel" id="project-emirdeck" aria-hidden="true">
+            <div class="project-panel-inner">
+              <p class="project-summary" data-i18n="emirdeck.summary">A small tray app for Stream Deck–style workflows: assign a key — numpad included — to a video, audio file or image, press it, and the media opens fullscreen on top of everything else. A native PyQt6 app rather than Electron, so it stays light.</p>
+              <ul class="project-highlights">
+                <li data-i18n="emirdeck.h1">Global hotkeys that work from any app, ESC or a click to dismiss, and a JSON config with a settings window on top.</li>
+                <li data-i18n="emirdeck.h2">Packaged for people who don't code: PyInstaller bundles everything, and the Inno Setup installer needs no Python, no console windows and no downloads.</li>
+                <li data-i18n="emirdeck.h3">Available in English, German, Turkish and Chinese, with the language picked automatically from the system.</li>
+              </ul>
+              <a class="btn btn-primary project-github" href="https://github.com/emirttac/EmirDeck" target="_blank" rel="noopener noreferrer" data-i18n="work.viewGithub">View code on GitHub</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="project" data-reveal>
+          <button type="button" class="project-trigger" aria-expanded="false" aria-controls="project-quality">
+            <div class="project-meta">
+              <span class="project-index">04</span>
+              <span class="project-stack">Python · OpenCV · ONNX</span>
+            </div>
+            <div class="project-body">
+              <h3>Quality Up'S</h3>
+              <p class="project-teaser" data-i18n="quality.teaser">Upscale and sharpen images with AI — fully offline.</p>
+              <ul class="project-tags">
+                <li>macOS + Windows</li>
+                <li>2× / 4×</li>
+                <li>Batch queue</li>
+              </ul>
+            </div>
+            <span class="project-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project-panel" id="project-quality" aria-hidden="true">
+            <div class="project-panel-inner">
+              <p class="project-summary" data-i18n="quality.summary">An image-enhancement desktop app where nothing leaves your machine: no cloud API, no analytics. A fast FSRCNN model is bundled; Real-ESRGAN through ONNX Runtime is available when you need better text, line art and faces.</p>
+              <ul class="project-highlights">
+                <li data-i18n="quality.h1">Overlapping-tile processing keeps large photos stable on modest hardware; transparency is preserved; exports to PNG, JPEG and WebP.</li>
+                <li data-i18n="quality.h2">Hardware-aware: a startup check scores the machine, and Real-ESRGAN uses CoreML on Apple Silicon or DirectML/CUDA on Windows when available, with CPU as the fallback.</li>
+                <li data-i18n="quality.h3">Ships for two platforms — a Windows installer and a macOS DMG — with a pluggable model-backend design and 8 UI languages.</li>
+              </ul>
+              <a class="btn btn-primary project-github" href="https://github.com/emirttac/Quality-Up-S" target="_blank" rel="noopener noreferrer" data-i18n="work.viewGithub">View code on GitHub</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="project" data-reveal>
+          <button type="button" class="project-trigger" aria-expanded="false" aria-controls="project-fps">
+            <div class="project-meta">
+              <span class="project-index">05</span>
+              <span class="project-stack">C++ · C#</span>
+            </div>
+            <div class="project-body">
+              <h3>FPS View Beta</h3>
+              <p class="project-teaser" data-i18n="fps.teaser">The lightweight overlay Mars grew out of.</p>
+              <ul class="project-tags">
+                <li>ETW</li>
+                <li>LibreHardwareMonitor</li>
+                <li>Beta 3.0</li>
+              </ul>
+            </div>
+            <span class="project-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project-panel" id="project-fps" aria-hidden="true">
+            <div class="project-panel-inner">
+              <p class="project-summary" data-i18n="fps.summary">A lightweight in-game FPS and hardware monitor built on Windows kernel tracing, with no process injection. It reports FPS, 1% lows, frametime, CPU/GPU temperature and clocks, and RAM/VRAM, in four overlay styles.</p>
+              <ul class="project-highlights">
+                <li data-i18n="fps.h1">Four overlay themes, drag-or-grid positioning, and a color picker written from scratch with trigonometry on WPF primitives.</li>
+                <li data-i18n="fps.h2">Moved its sensor layer to LibreHardwareMonitor for deeper, more robust readings, and expanded the metrics to 1% low, frametime, clocks and VRAM.</li>
+                <li data-i18n="fps.h3">An Inno Setup installer that quietly installs the .NET 8 and VC++ runtimes, and a UI in 8 languages.</li>
+              </ul>
+              <a class="btn btn-primary project-github" href="https://github.com/emirttac/FPS-View-Beta" target="_blank" rel="noopener noreferrer" data-i18n="work.viewGithub">View code on GitHub</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="project" data-reveal>
+          <button type="button" class="project-trigger" aria-expanded="false" aria-controls="project-gpu">
+            <div class="project-meta">
+              <span class="project-index">06</span>
+              <span class="project-stack">Data</span>
+            </div>
+            <div class="project-body">
+              <h3>gpu-presets</h3>
+              <p class="project-teaser" data-i18n="gpu.teaser">The GPU preset catalog behind Mars' overclock suggestions.</p>
+            </div>
+            <span class="project-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="project-panel" id="project-gpu" aria-hidden="true">
+            <div class="project-panel-inner">
+              <p class="project-summary" data-i18n="gpu.summary">A small, separate repository that holds GPU overclock presets as JSON. Mars fetches it only when you ask for suggestions, so presets can be improved without releasing a new app version.</p>
+              <ul class="project-highlights">
+                <li data-i18n="gpu.h1">Data lives apart from code, so the catalog and the app are versioned independently.</li>
+                <li data-i18n="gpu.h2">Fetched on demand only, and anything it suggests still passes through Mars' hard overclock limits.</li>
+                <li data-i18n="gpu.h3">Plain, reviewable JSON — easy to audit and to extend through pull requests.</li>
+              </ul>
+              <a class="btn btn-primary project-github" href="https://github.com/emirttac/gpu-presets" target="_blank" rel="noopener noreferrer" data-i18n="work.viewGithub">View code on GitHub</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="section-kicker" data-reveal data-i18n="about.kicker">About</p>
+          <h2 id="about-title" data-reveal>Emir Tuğra Ataç</h2>
+          <p data-reveal data-i18n="about.p1">I'm Emir Tuğra Ataç, a software developer focused on Windows and desktop applications. I enjoy the parts of a product users never see: reading frame data straight from the kernel, writing safety limits that fail closed, and building installers that handle every prerequisite so setup is just Next, Next, Finish.</p>
+          <p data-reveal data-i18n="about.p2">A few habits run through all my projects: they work locally and respect privacy, they explain what they're about to do before they do it, the risky logic is covered by tests, and they speak the user's language — Mars ships in 10. All the code is public on GitHub, so you can read it instead of taking my word for it.</p>
+          <p data-reveal data-i18n="about.p3">I've been publishing since 2023, and since 2024 I've been building a presence on YouTube as a video creator — shipping content, engaging with the community, and sharing what I learn in public.</p>
+        </div>
+        <aside class="about-stack" data-reveal data-i18n-aria="aria.stack" aria-label="Technologies">
+          <h3 data-i18n="stack.title">Stack</h3>
+          <ul>
+            <li><span>C# / .NET 8</span><span>WPF · MVVM · xUnit</span></li>
+            <li><span>Python</span><span>PyQt6 · CustomTkinter · OpenCV · ONNX Runtime</span></li>
+            <li><span>C++</span><span>ETW &amp; low-level Win32</span></li>
+            <li><span>Windows APIs</span><span>NVAPI · ADL · IGCL · LibreHardwareMonitor</span></li>
+            <li><span>Shipping</span><span>Inno Setup · PyInstaller · PowerShell</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <p class="section-kicker" data-reveal data-i18n="contact.kicker">Contact</p>
+      <h2 id="contact-title" data-reveal data-i18n="contact.title">Hiring, collaborating, or found a bug? Let's talk.</h2>
+      <p class="section-lead" data-reveal data-i18n="contact.lead">You can reach me on LinkedIn. Bugs and feature requests are welcome as GitHub issues on the relevant repository.</p>
+      <div class="contact-links" data-reveal>
+        <a href="https://www.linkedin.com/in/emir-tu%C4%9Fra-ata%C3%A7-88b591394/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/emirttac" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.youtube.com/@BiAltTab" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.instagram.com/emirttac/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> emirttac</p>
+    <p class="footer-note" data-i18n="footer.note">Powered by GitHub Pages</p>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js?v=14"></script>
+</body>
+</html>
