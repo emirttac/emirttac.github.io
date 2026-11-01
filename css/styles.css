@@ -428,10 +428,12 @@ p {
 .hero-content {
   position: relative;
   z-index: 1;
-  width: min(100% - (var(--space) * 2), 38rem);
-  max-width: 38rem;
+  box-sizing: border-box;
+  width: min(100%, 38rem);
+  max-width: 100%;
+  min-width: 0;
   justify-self: start;
-  margin-left: max(var(--space), calc((100% - var(--max)) / 2));
+  margin-left: max(0px, calc((100% - var(--max)) / 2));
   isolation: isolate;
 }
 
@@ -450,6 +452,8 @@ p {
   letter-spacing: -0.055em;
   line-height: 0.9;
   margin-bottom: 1.25rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   text-shadow: 0 0 28px var(--brand-glow);
 }
 
@@ -460,6 +464,12 @@ p {
   max-width: 32rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px var(--lead-glow);
+}
+
+.hero-eyebrow,
+.hero-lead {
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .hero-actions {
@@ -951,8 +961,9 @@ p {
   }
 
   .hero-content {
-    margin-left: var(--space);
-    width: min(100% - (var(--space) * 2), var(--max));
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hud-frame {
@@ -989,8 +1000,17 @@ p {
     display: none;
   }
 
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+  }
+
   .hero-brand {
-    font-size: clamp(3rem, 16vw, 4.2rem);
+    font-size: clamp(2.55rem, 11.5vw, 3.4rem);
+  }
+
+  .hero-lead {
+    font-size: 1.05rem;
   }
 }
 
