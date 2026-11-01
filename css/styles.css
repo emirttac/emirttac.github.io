@@ -447,13 +447,13 @@ p {
 }
 
 .hero-brand {
-  font-size: clamp(3.4rem, 12vw, 7.5rem);
+  font-size: clamp(2.5rem, 0.6rem + 8.2vw, 7.5rem);
   font-weight: 800;
   letter-spacing: -0.055em;
   line-height: 0.9;
   margin-bottom: 1.25rem;
   max-width: 100%;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
   text-shadow: 0 0 28px var(--brand-glow);
 }
 
@@ -1003,10 +1003,6 @@ p {
   .hero-eyebrow {
     font-size: 0.68rem;
     letter-spacing: 0.04em;
-  }
-
-  .hero-brand {
-    font-size: clamp(2.55rem, 11.5vw, 3.4rem);
   }
 
   .hero-lead {
