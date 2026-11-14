@@ -19,6 +19,7 @@ index.html
 css/styles.css
 js/i18n.js
 js/main.js
+images/certificates/
 ```
 
 Static site — no build step. Push to `main` to publish via GitHub Pages.

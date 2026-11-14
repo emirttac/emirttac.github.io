@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=12" />
+  <link rel="stylesheet" href="css/styles.css?v=13" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B1220'/%3E%3Ctext x='16' y='21.5' text-anchor='middle' font-family='ui-sans-serif,system-ui,-apple-system,sans-serif' font-size='13' font-weight='800' fill='%23F4F6F8' letter-spacing='-0.08em'%3Eea%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -59,6 +59,7 @@
       <nav class="nav" data-i18n-aria="aria.nav" aria-label="Main menu">
         <a href="#work" data-i18n="nav.work">Projects</a>
         <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#certificates" data-i18n="nav.certs">Certificates</a>
         <a href="#contact" data-i18n="nav.contact">Contact</a>
         <a class="nav-github" href="https://github.com/emirttac" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
@@ -306,6 +307,95 @@
       </div>
     </section>
 
+    <section id="certificates" class="section certificates" aria-labelledby="certificates-title">
+      <div class="section-head">
+        <p class="section-kicker" data-reveal data-i18n="certs.kicker">Certificates</p>
+        <h2 id="certificates-title" data-reveal data-i18n="certs.title">HP LIFE courses, completed</h2>
+        <p class="section-lead" data-reveal data-i18n="certs.lead">HP Foundation certificates in choosing technology for a business and in agile project management.</p>
+      </div>
+
+      <ul class="cert-list">
+        <li>
+          <article class="cert" data-reveal>
+            <button
+              type="button"
+              class="cert-preview"
+              data-cert-src="images/certificates/hp-life-agile-project-management.jpg"
+              data-alt-key="certs.agile.alt"
+              data-i18n-aria="certs.agile.open"
+              aria-label="View the Agile Project Management certificate"
+            >
+              <img
+                src="images/certificates/hp-life-agile-project-management.jpg"
+                width="1179"
+                height="822"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
+              <span class="cert-zoom" data-i18n="certs.view" aria-hidden="true">View</span>
+            </button>
+            <div class="cert-body">
+              <p class="cert-issuer">HP LIFE · HP Foundation</p>
+              <h3>Agile Project Management</h3>
+              <p class="cert-summary" data-i18n="certs.agile.summary">How to define a minimum viable product, tell iterative development from incremental development, and use Scrum and Kanban across teams.</p>
+              <p class="cert-meta">
+                <time datetime="2026-08-26" data-i18n="certs.agile.date">August 26, 2026</time>
+                <span class="cert-serial"><span data-i18n="certs.serial">Serial</span> <span class="cert-serial-value" translate="no">02b2dacb-3135-4c0c-a343-6f81bf093c9e</span></span>
+              </p>
+            </div>
+          </article>
+        </li>
+        <li>
+          <article class="cert" data-reveal>
+            <button
+              type="button"
+              class="cert-preview"
+              data-cert-src="images/certificates/hp-life-it-for-business-success.jpg"
+              data-alt-key="certs.it.alt"
+              data-i18n-aria="certs.it.open"
+              aria-label="View the IT for Business Success certificate"
+            >
+              <img
+                src="images/certificates/hp-life-it-for-business-success.jpg"
+                width="1179"
+                height="825"
+                alt=""
+                decoding="async"
+                loading="lazy"
+              />
+              <span class="cert-zoom" data-i18n="certs.view" aria-hidden="true">View</span>
+            </button>
+            <div class="cert-body">
+              <p class="cert-issuer">HP LIFE · HP Foundation</p>
+              <h3>IT for Business Success</h3>
+              <p class="cert-summary" data-i18n="certs.it.summary">How to choose technology for a business and integrate those solutions into the way the business runs.</p>
+              <p class="cert-meta">
+                <time datetime="2026-08-25" data-i18n="certs.it.date">August 25, 2026</time>
+                <span class="cert-serial"><span data-i18n="certs.serial">Serial</span> <span class="cert-serial-value" translate="no">cd89b746-c959-46fc-b55f-4ba1329ab237</span></span>
+              </p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <dialog class="cert-dialog" id="cert-dialog" aria-labelledby="cert-dialog-title">
+      <div class="cert-dialog-frame">
+        <div class="cert-dialog-bar">
+          <p id="cert-dialog-title"></p>
+          <button type="button" class="cert-dialog-close" data-i18n-aria="certs.close" aria-label="Close">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+          </button>
+        </div>
+        <div class="cert-dialog-stage">
+          <img id="cert-dialog-img" alt="" />
+        </div>
+      </div>
+    </dialog>
+
     <section id="contact" class="section contact" aria-labelledby="contact-title">
       <p class="section-kicker" data-reveal data-i18n="contact.kicker">Contact</p>
       <h2 id="contact-title" data-reveal data-i18n="contact.title">Hiring, collaborating, or found a bug? Let's talk.</h2>
@@ -324,7 +414,7 @@
     <p class="footer-note" data-i18n="footer.note">Powered by GitHub Pages</p>
   </footer>
 
-  <script src="js/i18n.js?v=15"></script>
-  <script src="js/main.js?v=15"></script>
+  <script src="js/i18n.js?v=16"></script>
+  <script src="js/main.js?v=16"></script>
 </body>
 </html>

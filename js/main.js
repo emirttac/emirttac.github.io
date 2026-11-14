@@ -66,6 +66,11 @@
       el.setAttribute("aria-label", t(active, key));
     });
 
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-alt");
+      if (key) el.setAttribute("alt", t(active, key));
+    });
+
     if (toggle) {
       const open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute(
@@ -264,6 +269,48 @@
       }
     });
   });
+
+  const currentLang = () =>
+    normalizeLang(document.documentElement.lang) ||
+    normalizeLang(localStorage.getItem(STORAGE_KEY)) ||
+    defaultLang;
+
+  const certDialog = document.getElementById("cert-dialog");
+  const certDialogImg = document.getElementById("cert-dialog-img");
+  const certDialogTitle = document.getElementById("cert-dialog-title");
+
+  if (certDialog && certDialogImg && certDialogTitle) {
+    document.querySelectorAll(".cert-preview").forEach((button) => {
+      button.addEventListener("click", () => {
+        const card = button.closest(".cert");
+        const title = card && card.querySelector("h3");
+        const shot = button.querySelector("img");
+        const altKey = button.getAttribute("data-alt-key") || "";
+        certDialogTitle.textContent = title ? title.textContent : "";
+        certDialogImg.src = button.getAttribute("data-cert-src") || "";
+        certDialogImg.setAttribute("data-i18n-alt", altKey);
+        certDialogImg.alt = t(currentLang(), altKey);
+        if (shot) {
+          const w = Number(shot.getAttribute("width"));
+          const h = Number(shot.getAttribute("height"));
+          if (w) certDialogImg.width = w;
+          if (h) certDialogImg.height = h;
+        }
+        if (typeof certDialog.showModal === "function") {
+          certDialog.showModal();
+        }
+      });
+    });
+
+    const closeCert = certDialog.querySelector(".cert-dialog-close");
+    if (closeCert) {
+      closeCert.addEventListener("click", () => certDialog.close());
+    }
+
+    certDialog.addEventListener("click", (event) => {
+      if (event.target === certDialog) certDialog.close();
+    });
+  }
 
   const nodes = document.querySelectorAll("[data-reveal]");
 
