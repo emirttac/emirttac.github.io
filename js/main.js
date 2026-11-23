@@ -270,6 +270,25 @@
     });
   });
 
+  const docsRoute = () => {
+    const isDocs = window.location.hash === "#docs";
+    const wasDocs = document.body.classList.contains("is-docs");
+    if (isDocs === wasDocs) return;
+
+    document.body.classList.toggle("is-docs", isDocs);
+
+    if (isDocs) {
+      window.scrollTo(0, 0);
+    } else if (wasDocs) {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target) target.scrollIntoView();
+      else window.scrollTo(0, 0);
+    }
+  };
+
+  docsRoute();
+  window.addEventListener("hashchange", docsRoute);
+
   const currentLang = () =>
     normalizeLang(document.documentElement.lang) ||
     normalizeLang(localStorage.getItem(STORAGE_KEY)) ||
